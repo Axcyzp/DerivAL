@@ -12,9 +12,11 @@ export const APP_SHELL_STYLES = {
   root: {
     backgroundColor: "#050508",
     minHeight: "100dvh",
+    width: "100%",
+    maxWidth: "100%",
     color: "#fff",
     position: "relative",
-    overflowX: "hidden",
+    overflow: "hidden",
   },
   topGlow: {
     ...glowBase,
@@ -31,11 +33,13 @@ export const APP_SHELL_STYLES = {
       "radial-gradient(ellipse at bottom, rgba(135,34,182,0.15) 0%, rgba(209,39,137,0.05) 50%, transparent 80%)",
   },
   main: {
+    width: "100%",
     maxWidth: "1000px",
     margin: "0 auto",
     padding: "120px 20px 40px 20px",
     position: "relative",
     zIndex: 2,
+    boxSizing: "border-box",
   },
   mainMobile: {
     padding: "136px 14px 28px 14px",

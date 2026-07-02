@@ -76,8 +76,6 @@ function NavigationHeader() {
             display: "block",
             width: isMobile ? "158px" : "285px",
             height: isMobile ? "auto" : "86px",
-            backfaceVisibility: "hidden",
-            transform: "translateZ(0)",
           }}
         />
       </div>
@@ -90,6 +88,8 @@ function NavigationHeader() {
           width: isMobile ? "100%" : "auto",
           maxWidth: isMobile ? "430px" : "none",
           margin: isMobile ? "0 auto" : 0,
+          boxSizing: "border-box",
+          overflow: "hidden",
         }}
       >
         <div
