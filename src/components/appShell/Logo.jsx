@@ -1,0 +1,183 @@
+import React from "react";
+
+function Logo({ style }) {
+  return (
+    <svg
+      width="620"
+      height="230"
+      viewBox="185 20 620 230"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-labelledby="title desc"
+      style={style}
+    >
+      <title id="title">DerivAL logo</title>
+      <desc id="desc">
+        A sleek dark mathematics logo for DerivAL, featuring an angular star
+        emblem and derivative-inspired wordmark.
+      </desc>
+
+      <defs>
+        <radialGradient id="bgGlow" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stopColor="#B43CFF" stopOpacity="0.28" />
+          <stop offset="52%" stopColor="#8E1C74" stopOpacity="0.13" />
+          <stop offset="100%" stopColor="#050508" stopOpacity="0" />
+        </radialGradient>
+
+        <linearGradient
+          id="markGradient"
+          x1="151"
+          y1="58"
+          x2="255"
+          y2="260"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#F7E8FF" />
+          <stop offset="34%" stopColor="#C084FC" />
+          <stop offset="72%" stopColor="#D12789" />
+          <stop offset="100%" stopColor="#6B1045" />
+        </linearGradient>
+
+        <linearGradient
+          id="wordGradient"
+          x1="334"
+          y1="112"
+          x2="806"
+          y2="250"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="45%" stopColor="#E9D5FF" />
+          <stop offset="100%" stopColor="#C084FC" />
+        </linearGradient>
+
+        <linearGradient
+          id="accentGradient"
+          x1="711"
+          y1="99"
+          x2="892"
+          y2="270"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#C084FC" />
+          <stop offset="100%" stopColor="#D12789" />
+        </linearGradient>
+
+        <linearGradient
+          id="textShine"
+          x1="333"
+          y1="111"
+          x2="760"
+          y2="166"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.72" />
+          <stop offset="44%" stopColor="#FFFFFF" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+        </linearGradient>
+
+        <filter
+          id="softShadow"
+          x="43"
+          y="21"
+          width="1104"
+          height="324"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy="18" />
+          <feGaussianBlur stdDeviation="18" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.18 0 0 0 0 0.02 0 0 0 0 0.28 0 0 0 0.42 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_1_1"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_1_1"
+            result="shape"
+          />
+        </filter>
+
+        <filter
+          id="neonBlur"
+          x="20"
+          y="-20"
+          width="520"
+          height="360"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feGaussianBlur stdDeviation="13" />
+        </filter>
+      </defs>
+
+      <g>
+        <g transform="translate(280 122) rotate(-18) scale(0.72) translate(-210 -128)">
+          <g filter="url(#neonBlur)" opacity="0.62">
+            <path
+              d="M210 18L241.1 101.8L329.7 108.7L261.4 165.4L283.2 251.8L210 203.3L136.8 251.8L158.6 165.4L90.3 108.7L178.9 101.8L210 18Z"
+              fill="#8B2FFF"
+            />
+          </g>
+
+          <path
+            d="M210 18L241.1 101.8L329.7 108.7L261.4 165.4L283.2 251.8L210 203.3L136.8 251.8L158.6 165.4L90.3 108.7L178.9 101.8L210 18Z"
+            fill="url(#markGradient)"
+          />
+          <path
+            d="M210 48.4L234.3 113.6L303.2 119L250 163.1L267 230.4L210 192.7L153 230.4L170 163.1L116.8 119L185.7 113.6L210 48.4Z"
+            fill="#050508"
+            fillOpacity="0.88"
+          />
+
+          <path
+            d="M203.5 76.6H225.8L197.4 226.2H175.1L203.5 76.6Z"
+            fill="#F7E8FF"
+          />
+          <path
+            d="M238.1 102.3L262 154.5L218.4 206.2H193.6L237.7 154.3L214.4 102.3H238.1Z"
+            fill="#C084FC"
+          />
+          <path
+            d="M160.4 128.9H188.8L185.3 147.7H156.8L160.4 128.9Z"
+            fill="#D12789"
+          />
+          <path
+            d="M153 167.7H181.3L177.8 186.4H149.4L153 167.7Z"
+            fill="#D12789"
+          />
+        </g>
+
+        <g transform="skewX(-7)">
+          <text
+            x="345"
+            y="221"
+            fontFamily="Satoshi, Inter, Avenir Next, Segoe UI, Arial, sans-serif"
+            fontSize="124"
+            fontWeight="860"
+            letterSpacing="-9"
+          >
+            <tspan fill="url(#wordGradient)">Deriv</tspan>
+            <tspan fill="url(#accentGradient)">AL</tspan>
+          </text>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+export default Logo;

@@ -2,10 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import useMediaQuery from "../common/useMediaQuery";
 import { FONT } from "../common/theme";
+import Logo from "./Logo";
 
 const NAV_ITEMS = [
   { label: "Features", path: "/" },
-  { label: "Access Past Papers", mobileLabel: "Past Papers", path: "/past-papers" },
+  {
+    label: "Access Past Papers",
+    mobileLabel: "Past Papers",
+    path: "/past-papers",
+  },
   { label: "AI Assistant", path: "/ai-assistant" },
 ];
 
@@ -69,9 +74,7 @@ function NavigationHeader() {
           minWidth: 0,
         }}
       >
-        <img
-          src="/derival-logo.svg"
-          alt="DerivAL"
+        <Logo
           style={{
             display: "block",
             width: isMobile ? "158px" : "285px",
@@ -137,10 +140,18 @@ function NavigationHeader() {
                 zIndex: 1,
                 flex: isMobile ? "1 1 0" : "0 0 auto",
                 minWidth: 0,
-                padding: isMobile ? (isNarrow ? "8px 6px" : "8px 8px") : "8px 20px",
+                padding: isMobile
+                  ? isNarrow
+                    ? "8px 6px"
+                    : "8px 8px"
+                  : "8px 20px",
                 borderRadius: "24px",
                 border: "none",
-                fontSize: isMobile ? (isNarrow ? "0.7rem" : "0.76rem") : "0.9rem",
+                fontSize: isMobile
+                  ? isNarrow
+                    ? "0.7rem"
+                    : "0.76rem"
+                  : "0.9rem",
                 fontWeight: index === currentIndex ? "600" : "400",
                 color: index === currentIndex ? "#ffffff" : "#94a3b8",
                 cursor: "pointer",

@@ -4,6 +4,7 @@ import useMediaQuery from "../components/common/useMediaQuery";
 import { FEATURE_CARDS } from "../components/home/content";
 import FeatureCard from "../components/home/FeatureCard";
 import { BadgeIcon } from "../components/home/icons";
+import Logo from "../components/appShell/Logo";
 import {
   HOME_MOBILE_STYLES,
   HOME_STYLES,
@@ -53,8 +54,7 @@ export default function HomePage() {
           ) : (
             <>
               Everything You Need for
-              <br />
-              A Level Maths
+              <br />A Level Maths
             </>
           )}
         </h1>
@@ -106,9 +106,7 @@ export default function HomePage() {
 
       <footer style={S.footer}>
         <div style={S.footerBrand}>
-          <img
-            src="/derival-logo.svg"
-            alt="DerivAL - Derive A-Level"
+          <Logo
             style={{
               display: "block",
               width: isMobile ? "145px" : "210px",
