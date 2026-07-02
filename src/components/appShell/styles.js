@@ -16,21 +16,20 @@ export const APP_SHELL_STYLES = {
     maxWidth: "100%",
     color: "#fff",
     position: "relative",
-    overflow: "hidden",
+    overflowX: "hidden",
   },
   topGlow: {
     ...glowBase,
     top: "-15%",
     background:
-      "radial-gradient(ellipse at top, rgba(135,34,182,0.15) 0%, rgba(209,39,137,0.05) 50%, transparent 80%)",
+      "radial-gradient(ellipse at top, rgba(135,34,182,0.15) 0%, rgba(209,39,137,0.04) 35%, transparent 55%)",
   },
   bottomGlow: {
     ...glowBase,
-    position: "fixed",
     bottom: 0,
     top: "unset",
     background:
-      "radial-gradient(ellipse at bottom, rgba(135,34,182,0.15) 0%, rgba(209,39,137,0.05) 50%, transparent 80%)",
+      "radial-gradient(ellipse at bottom, rgba(135,34,182,0.15) 0%, rgba(209,39,137,0.04) 35%, transparent 55%)",
   },
   main: {
     width: "100%",

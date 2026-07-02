@@ -6,10 +6,13 @@ import { APP_SHELL_STYLES as S } from "./styles";
 export default function AppShell({ children }) {
   const isMobile = useMediaQuery("(max-width: 640px)");
 
+  const topGlowStyle = isMobile ? { ...S.topGlow, top: "90px" } : S.topGlow;
+  const bottomGlowStyle = S.bottomGlow;
+
   return (
     <div style={S.root}>
-      <div style={S.topGlow} />
-      <div style={S.bottomGlow} />
+      <div style={topGlowStyle} />
+      <div style={bottomGlowStyle} />
 
       <NavigationHeader />
 
