@@ -25,5 +25,41 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      // Older browsers can't parse the ES2020+ syntax (optional chaining,
+      // nullish coalescing, etc.) that some of our dependencies ship
+      // un-transpiled from node_modules. When that happens the whole
+      // bundle throws a SyntaxError before React ever mounts, and the
+      // user is left staring at the plain dark page background with no
+      // explanation. This tiny ES5-only script runs first and shows a
+      // friendly message instead of a blank screen in that case.
+      (function () {
+        function showFallback() {
+          var root = document.getElementById("root");
+          if (!root || root.hasChildNodes()) return;
+          root.innerHTML =
+            '<div style="min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;text-align:center;font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;color:#f5f5f7;background:#050508;">' +
+            '<div style="max-width:420px;">' +
+            '<h1 style="font-size:20px;margin:0 0 12px;">Please update your browser</h1>' +
+            '<p style="font-size:15px;line-height:1.5;opacity:0.8;margin:0;">DerivAL needs a newer browser to run properly. Please update your device, or open this page in a recent version of Chrome or Safari.</p>' +
+            "</div></div>";
+        }
+        try {
+          // Feature-test the syntax our dependencies rely on, without
+          // letting an unsupported-syntax error crash the whole page.
+          Function("var a = {b:1}; return a?.b ?? 0;");
+        } catch (e) {
+          showFallback();
+          return;
+        }
+        window.addEventListener(
+          "error",
+          function () {
+            setTimeout(showFallback, 0);
+          },
+          true,
+        );
+      })();
+    </script>
   </body>
 </html>

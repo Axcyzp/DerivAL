@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@supabase/supabase-js": "^2.108.2",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -22,9 +23,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -36,11 +37,12 @@
   "browserslist": {
     "production": [
       "defaults",
-      "ios >= 9",
-      "safari >= 9",
-      "android >= 4.4",
-      "chrome >= 30",
-      "not op_mini all"
+      "ios >= 12",
+      "safari >= 12",
+      "android >= 6",
+      "chrome >= 60",
+      "not op_mini all",
+      "not dead"
     ],
     "development": [
       "last 1 chrome version",
