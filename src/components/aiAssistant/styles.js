@@ -274,7 +274,8 @@ export const createAssistantStyles = ({
           ...STATIC_STYLES.card,
           padding: "14px",
           borderRadius: "22px",
-          minHeight: "calc(100svh - 172px)",
+          marginTop: "14px",
+          minHeight: "calc(100svh - 186px)",
         },
         chatHistory: {
           ...STATIC_STYLES.chatHistory,
