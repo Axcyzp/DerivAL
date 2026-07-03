@@ -30,6 +30,7 @@ export const STATIC_STYLES = {
   card: {
     background: "rgba(255,255,255,0.02)",
     backdropFilter: "blur(20px)",
+    WebkitBackdropFilter: "blur(20px)",
     border: "1px solid rgba(255,255,255,0.05)",
     borderRadius: "24px",
     display: "flex",
@@ -235,7 +236,7 @@ export const createAssistantStyles = ({
     ? {
         wrapper: {
           ...STATIC_STYLES.wrapper,
-          height: "calc(100svh - 154px)",
+          height: "calc(100vh - 154px)",
           minHeight: "500px",
           alignItems: "center",
           justifyContent: "center",
@@ -275,7 +276,7 @@ export const createAssistantStyles = ({
           padding: "14px",
           borderRadius: "22px",
           marginTop: "14px",
-          minHeight: "calc(100svh - 186px)",
+          minHeight: "calc(100vh - 186px)",
         },
         chatHistory: {
           ...STATIC_STYLES.chatHistory,

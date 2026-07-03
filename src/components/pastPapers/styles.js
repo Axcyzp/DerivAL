@@ -4,6 +4,7 @@ export const PAST_PAPERS_STYLES = {
   panel: {
     background: "rgba(255,255,255,0.04)",
     backdropFilter: "blur(10px)",
+    WebkitBackdropFilter: "blur(10px)",
     border: "1px solid rgba(255,255,255,0.08)",
     padding: "40px",
     borderRadius: "24px",

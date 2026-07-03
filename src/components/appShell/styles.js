@@ -11,7 +11,7 @@ const glowBase = {
 export const APP_SHELL_STYLES = {
   root: {
     backgroundColor: "#050508",
-    minHeight: "100dvh",
+    minHeight: "100vh",
     width: "100%",
     maxWidth: "100%",
     color: "#fff",
