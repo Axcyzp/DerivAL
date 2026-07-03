@@ -135,7 +135,8 @@ export default function HomePage() {
         </div>
 
         <div style={S.copyright}>
-          © 2026-2027 Derive A-Level. All rights reserved.
+          © 2026-2027 Derive A-Level by Asad Haider Raza. A non-profit,
+          student-built tool. All materials remain the property of CAIE.
         </div>
       </footer>
     </div>
