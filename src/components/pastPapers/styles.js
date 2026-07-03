@@ -8,6 +8,7 @@ export const PAST_PAPERS_STYLES = {
     padding: "40px",
     borderRadius: "24px",
     marginTop: "20px",
+    boxShadow: "0 0 40px rgba(168,85,247,0.08)",
   },
   heading: {
     color: "#fff",
@@ -36,7 +37,7 @@ export const PAST_PAPERS_STYLES = {
     overflow: "hidden",
     border: "1px solid rgba(168,85,247,0.2)",
     background: "rgba(255,255,255,0.03)",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.5), 0 0 30px rgba(168,85,247,0.1)",
   },
   viewerHeader: {
     display: "flex",
@@ -159,6 +160,9 @@ export const downloadButtonStyle = (hovered, isMobile = false) => ({
   fontSize: "0.85rem",
   fontWeight: "600",
   cursor: "pointer",
+  boxShadow: hovered
+    ? "0 0 24px rgba(168,85,247,0.35)"
+    : "0 0 16px rgba(168,85,247,0.15)",
 });
 
 export const mobileViewButtonStyle = (hovered) => ({
@@ -172,8 +176,10 @@ export const mobileViewButtonStyle = (hovered) => ({
   fontWeight: "600",
   fontSize: "0.95rem",
   cursor: "pointer",
+  boxShadow: hovered
+    ? "0 0 24px rgba(168,85,247,0.35)"
+    : "0 0 16px rgba(168,85,247,0.15)",
 });
-
 
 export const PAST_PAPERS_MOBILE_STYLES = {
   panel: {

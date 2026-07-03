@@ -12,6 +12,7 @@ export default function AppShell({ children }) {
   return (
     <div style={S.root}>
       <div style={topGlowStyle} />
+      <div style={S.middleGlow} />
       <div style={bottomGlowStyle} />
 
       <NavigationHeader />

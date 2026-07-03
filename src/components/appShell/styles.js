@@ -29,7 +29,19 @@ export const APP_SHELL_STYLES = {
     bottom: 0,
     top: "unset",
     background:
-      "radial-gradient(ellipse at bottom, rgba(135,34,182,0.15) 0%, rgba(209,39,137,0.04) 35%, transparent 55%)",
+      "linear-gradient(to bottom, transparent 0%, transparent 75%, #050508 100%), radial-gradient(ellipse at bottom, rgba(135,34,182,0.15) 0%, rgba(209,39,137,0.04) 35%, transparent 55%)",
+  },
+  middleGlow: {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "100%",
+    height: "600px",
+    pointerEvents: "none",
+    zIndex: 1,
+    background:
+      "radial-gradient(ellipse farthest-side at center, rgba(135,34,182,0.08) 0%, rgba(209,39,137,0.025) 45%, transparent 100%)",
   },
   main: {
     width: "100%",

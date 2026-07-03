@@ -168,8 +168,8 @@ export const primaryButtonStyle = (hovered, isMobile = false) => ({
   cursor: "pointer",
   transition: "transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease",
   boxShadow: hovered
-    ? "0 6px 24px rgba(125,20,86,0.55)"
-    : "0 4px 16px rgba(80,10,80,0.35)",
+    ? "0 6px 24px rgba(125,20,86,0.55), 0 0 40px rgba(168,85,247,0.35)"
+    : "0 4px 16px rgba(80,10,80,0.35), 0 0 24px rgba(168,85,247,0.2)",
   transform: hovered
     ? "translateY(-2px) scale(1.04)"
     : "translateY(0) scale(1)",
@@ -190,7 +190,9 @@ export const secondaryButtonStyle = (hovered, isMobile = false) => ({
   transition:
     "background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease",
   transform: hovered ? "translateY(-2px)" : "translateY(0)",
-  boxShadow: hovered ? "0 0 0 4px rgba(168,85,247,0.12)" : "none",
+  boxShadow: hovered
+    ? "0 0 0 4px rgba(168,85,247,0.12), 0 0 30px rgba(168,85,247,0.25)"
+    : "0 0 20px rgba(168,85,247,0.1)",
 });
 
 export const featureCardStyle = (hovered, isMobile = false) => ({
@@ -210,8 +212,8 @@ export const featureCardStyle = (hovered, isMobile = false) => ({
   cursor: "pointer",
   transform: hovered ? "translateY(-4px)" : "translateY(0)",
   boxShadow: hovered
-    ? "0 8px 30px rgba(80,10,80,0.35), inset 0 1px 0 rgba(255,255,255,0.06)"
-    : "none",
+    ? "0 8px 30px rgba(80,10,80,0.35), 0 0 40px rgba(168,85,247,0.2), inset 0 1px 0 rgba(255,255,255,0.06)"
+    : "0 0 30px rgba(168,85,247,0.08)",
   backdropFilter: hovered ? "blur(24px)" : "none",
   WebkitBackdropFilter: hovered ? "blur(24px)" : "none",
 });
@@ -223,7 +225,6 @@ export const footerLinkStyle = (hovered) => ({
   transition: "color 0.2s ease",
   textDecoration: "none",
 });
-
 
 export const HOME_MOBILE_STYLES = {
   container: {
